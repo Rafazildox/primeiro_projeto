@@ -2,13 +2,13 @@ body {
     font-family: 'Poppins', sans-serif;
     max-width: 1280px;
     margin: 0 auto;
-    background-color: rgb(108, 226, 108);
+    background-image: linear-gradient(150deg, #655ea1, #79eb7e);
     color: rgb(0, 0, 0);
     padding: 25px;
 }
 
 body.modo_escuro {
-    background-color: rgb(3, 34, 3);
+    background-image: linear-gradient(150deg, #28243f, #203e21);
     color: rgb(255, 255, 255);
     padding: 25px;
 }
@@ -19,7 +19,8 @@ body .music {
     margin-bottom: 1%;
 
 }
-main{
+
+main {
     text-align: center;
     margin-top: 10px;
     border-radius: 10px;
@@ -35,41 +36,45 @@ header {
 header .logo,
 header .github,
 header .linkedin,
+header .imagem_botao_mudar_tema,
+header #botao_alterar_tema,
 header .whatsapp {
     transition: 0.2s ease-in-out;
     width: 40px;
     margin-right: 35px;
-}
-
-header .imagem_botao_mudar_tema {
-    width: 40px;
-}
-
-header #botao_alterar_tema {
     background: none;
+    margin: none;
     border: none;
-    transition: 0.2s ease-in-out;
 }
 
 header .logo:hover,
-header #botao_alterar_tema:hover,
 header .github:hover,
 header .linkedin:hover,
 header .whatsapp:hover {
     transform: scale(1.5);
     cursor: pointer;
+    background-color: #898989;
+    border-radius: 20px;
 }
 
-header .music {
-    visibility: visible;
-    padding: 15px;
-
+header #botao_alterar_tema:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+    border-radius: 100px;
+    padding: -10px;
+    bottom: auto;
 }
 
 main .cartao_pokemon:hover {
     transform: scale(1.09);
     cursor: pointer;
+}
 
+main .cartao_pokemon_deus:hover {
+    transform: scale(1.09);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
 }
 
 main .listagem_pokemon {
@@ -82,7 +87,7 @@ main .listagem_pokemon {
 }
 
 main .cartao_pokemon {
-    background-color: #d8e3ec;
+    box-shadow: 1px 1px 1px #3e3a63;
     width: 220px;
     padding: 15px;
     display: flex;
@@ -96,16 +101,22 @@ main .cartao_pokemon {
 }
 
 main .cartao_pokemon:hover {
-    background-color: #c1a3ffd5;
+    background-image: linear-gradient(150deg, #655ea1, #5eb763);
+}
+
+.cartao_pokemon:hover {
+    background-color: #9d62ef89;
+
 }
 
 .modo_escuro .cartao_pokemon {
-    background-color: #2c362a;
+    color: #27ea4a;
 }
 
 .modo_escuro .cartao_pokemon:hover {
-    background-color: #655ea1;
+    background-image: linear-gradient(150deg, #504b80, #498d4c);
 }
+
 
 main .cartao_pokemon .informacoes {
     display: flex;
@@ -122,11 +133,11 @@ main .cartao_pokemon .informacoes span {
 }
 
 .modo_escuro span {
-    color: #ffffff;
+    color: #90df89;
 }
 
 span {
-    color: #0d2f06;
+    color: #133010;
 
 }
 
@@ -136,57 +147,78 @@ main .cartao_pokemon .gif {
 
 }
 
+main .modo_escuro .cartao_pokemon .tipos {
+    display: flex;
+    gap: 5px;
+    color: rgb(34, 33, 33);
+    border-radius: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+
 main .cartao_pokemon .tipos {
     display: flex;
     gap: 5px;
     color: rgb(34, 33, 33);
-
+    border-radius: 10px;
 }
 
 .modo_escuro .cartao_pokemon .tipos {
-    color: #fcfcfc;
+    color: #ffffff;
 }
 
 .tipo_grama {
     background-color: #7ac74c;
     border-radius: 10px;
     padding: 5px;
+
+
 }
 
 .tipo_inseto {
     background-color: #27ea4a;
     border-radius: 10px;
     padding: 5px;
+
+
 }
 
 .tipo_veneno {
     background-color: #c54ef0;
     border-radius: 10px;
     padding: 5px;
+
 }
 
 .tipo_agua {
     background-color: #6390f0;
     border-radius: 10px;
     padding: 5px;
+
+
 }
 
 .tipo_fogo {
-    background-color: rgb(217, 94, 27);
+    background-color: rgb(223, 92, 21);
     border-radius: 10px;
     padding: 5px;
+
+
 }
 
 .tipo_voador {
     background-color: rgb(106, 230, 219);
     border-radius: 10px;
     padding: 5px;
+
+
 }
 
 .tipo_deus {
-    background-color: gold;
+    background-image: linear-gradient(90deg, rgb(221, 255, 0), rgb(250, 150, 0));
     border-radius: 10px;
     padding: 5px;
+
+
 }
 
 main .descricao {
@@ -197,6 +229,7 @@ main .descricao {
     color: #0a230f;
 }
 
+
 .modo_escuro .descricao {
-    color: white
+    color: rgb(143, 245, 125)
 }
